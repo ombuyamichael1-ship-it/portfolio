@@ -8,154 +8,159 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
+    <!-- Left Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="sidebar-brand">
             <div class="logo">MO</div>
-            <ul>
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <span class="brand-name">Michael Ombuya</span>
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="#home" class="active"><span class="nav-icon">🏠</span> Home</a></li>
+            <li><a href="#about"><span class="nav-icon">👤</span> About</a></li>
+            <li><a href="#skills"><span class="nav-icon">⚡</span> Skills</a></li>
+            <li><a href="#projects"><span class="nav-icon">📁</span> Projects</a></li>
+            <li><a href="#contact"><span class="nav-icon">📧</span> Contact</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <p>&copy; 2026</p>
         </div>
     </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="home">
-        <div class="home-content">
-            <h1 class="fade-in">Hi, I'm <span>Michael Onyango Ombuya</span></h1>
-            <h2 class="fade-in delay-1">Software Engineering Student | IT Support | Cybersecurity Enthusiast</h2>
-            <p class="fade-in delay-2">Passionate about building secure systems and solving technical challenges.</p>
-            <div class="home-buttons fade-in delay-3">
-                <a href="#contact" class="btn primary">Get in Touch</a>
-                <a href="#projects" class="btn secondary">View My Work</a>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section home">
+            <div class="container">
+                <h1 class="fade-in">Hi, I'm <span>Michael Onyango Ombuya</span></h1>
+                <h2 class="fade-in delay-1">Software Engineering Student | IT Support | Cybersecurity Enthusiast</h2>
+                <p class="fade-in delay-2">Passionate about building secure systems and solving technical challenges.</p>
+                <div class="home-buttons fade-in delay-3">
+                    <a href="#contact" class="btn primary">Get in Touch</a>
+                    <a href="#projects" class="btn secondary">View My Work</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="underline"></div>
-            <div class="about-content">
-                <p>I'm a Software Engineering student at MOHI Technical Training Institute, passionate about cybersecurity, IT support, and building secure systems.</p>
+        <!-- About Section -->
+        <section id="about" class="section about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="underline"></div>
+                <p class="about-text">I'm a Software Engineering student at MOHI Technical Training Institute, passionate about cybersecurity, IT support, and building secure systems.</p>
                 <div class="about-grid">
-                    <div>
+                    <div class="about-item">
                         <strong>Phone</strong>
                         <p>0118726921</p>
                     </div>
-                    <div>
+                    <div class="about-item">
                         <strong>Email</strong>
                         <p>ombuyamichael1@gmail.com</p>
                     </div>
-                    <div>
+                    <div class="about-item">
                         <strong>Nationality</strong>
                         <p>Kenyan</p>
                     </div>
-                    <div>
+                    <div class="about-item">
                         <strong>Languages</strong>
                         <p>English, Kiswahili, Luo</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="underline"></div>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Networking</h3>
-                    <p>Fundamentals, Cisco, Configuration, Troubleshooting</p>
-                </div>
-                <div class="skill-card">
-                    <h3>IT Support</h3>
-                    <p>Hardware, Software, System Setup, User Support</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Cybersecurity</h3>
-                    <p>Ethical Hacking, Kali Linux, Vulnerability Scanning</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Development</h3>
-                    <p>Python, Node.js, JavaScript, HTML/CSS</p>
+        <!-- Skills Section -->
+        <section id="skills" class="section skills">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <div class="underline"></div>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>Networking</h3>
+                        <p>Fundamentals, Cisco, Configuration, Troubleshooting</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>IT Support</h3>
+                        <p>Hardware, Software, System Setup, User Support</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Cybersecurity</h3>
+                        <p>Ethical Hacking, Kali Linux, Vulnerability Scanning</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Development</h3>
+                        <p>Python, Node.js, JavaScript, HTML/CSS</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="underline"></div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>OmniBrain AI</h3>
-                    <p>AI workspace with voice, calendar, and automation.</p>
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>Node.js</span>
-                        <span>React</span>
+        <!-- Projects Section -->
+        <section id="projects" class="section projects">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="underline"></div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>OmniBrain AI</h3>
+                        <p>AI workspace with voice, calendar, and automation.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Node.js</span>
+                            <span>React</span>
+                        </div>
+                        <a href="https://github.com/ombuyamichael1-ship-it/omnibrain" class="project-link">View Project →</a>
                     </div>
-                    <a href="https://github.com/ombuyamichael1-ship-it/omnibrain" class="project-link">View Project →</a>
-                </div>
-                <div class="project-card">
-                    <h3>HRMS System</h3>
-                    <p>Complete HR management with admin and employee dashboards.</p>
-                    <div class="project-tags">
-                        <span>Node.js</span>
-                        <span>SQLite</span>
-                        <span>JavaScript</span>
+                    <div class="project-card">
+                        <h3>HRMS System</h3>
+                        <p>Complete HR management with admin and employee dashboards.</p>
+                        <div class="project-tags">
+                            <span>Node.js</span>
+                            <span>SQLite</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="https://github.com/ombuyamichael1-ship-it/hrms" class="project-link">View Project →</a>
                     </div>
-                    <a href="https://github.com/ombuyamichael1-ship-it/hrms" class="project-link">View Project →</a>
-                </div>
-                <div class="project-card">
-                    <h3>Cyber Toolkit</h3>
-                    <p>Ethical hacking tools and vulnerability scanner.</p>
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>Kali</span>
-                        <span>Security</span>
+                    <div class="project-card">
+                        <h3>Cyber Toolkit</h3>
+                        <p>Ethical hacking tools and vulnerability scanner.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Kali</span>
+                            <span>Security</span>
+                        </div>
+                        <a href="#" class="project-link">View Project →</a>
                     </div>
-                    <a href="#" class="project-link">View Project →</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Contact</h2>
-            <div class="underline"></div>
-            <div class="contact-content">
-                <div>
-                    <strong>Phone</strong>
-                    <p>0118726921</p>
-                </div>
-                <div>
-                    <strong>Email</strong>
-                    <p><a href="mailto:ombuyamichael1@gmail.com">ombuyamichael1@gmail.com</a></p>
-                </div>
-                <div>
-                    <strong>GitHub</strong>
-                    <p><a href="https://github.com/ombuyamichael1-ship-it">github.com/ombuyamichael1-ship-it</a></p>
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <div class="underline"></div>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <strong>Phone</strong>
+                        <p>0118726921</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Email</strong>
+                        <p><a href="mailto:ombuyamichael1@gmail.com">ombuyamichael1@gmail.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>GitHub</strong>
+                        <p><a href="https://github.com/ombuyamichael1-ship-it">github.com/ombuyamichael1-ship-it</a></p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Michael Onyango Ombuya. Built with ❤️</p>
-    </footer>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Michael Onyango Ombuya. Built with ❤️</p>
+        </footer>
+    </main>
 
     <script src="script.js"></script>
 </body>
