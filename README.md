@@ -1,4 +1,4 @@
-# 🚀 Michael Onyango Omboys - Portfolio
+# Michael Onyango Ombuya - Portfolio
 
 ## 👋 About Me
 I'm a Software Engineering student at MOHI Technical Training Institute, passionate about cybersecurity, IT support, and building secure systems.
@@ -11,8 +11,8 @@ I'm a Software Engineering student at MOHI Technical Training Institute, passion
 
 ## 📁 Projects
 - **OmniBrain AI** - AI workspace with voice and automation
+- **HRMS System** - Complete HR management system
 - **Cyber Toolkit** - Ethical hacking tools
-- **IT Support System** - Ticketing and support management
 
 ## 📞 Contact
 - Email: ombuyamichael1@gmail.com
