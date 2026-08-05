@@ -26,33 +26,28 @@
         nav ul li a:hover, nav ul li a.active { color: #fff; }
 
         .profile-photo {
-            width: 180px; height: 180px; border-radius: 50%; object-fit: cover;
+            width: 160px; height: 160px; border-radius: 50%; object-fit: cover;
             border: 4px solid #6366f1; margin-bottom: 20px;
             box-shadow: 0 0 40px rgba(99,102,241,0.2);
-            animation: fadeUp 0.8s ease forwards;
         }
         .profile-photo-placeholder {
-            width: 180px; height: 180px; border-radius: 50%;
+            width: 160px; height: 160px; border-radius: 50%;
             background: linear-gradient(135deg, #6366f1, #4f46e5);
             display: flex; align-items: center; justify-content: center;
             font-size: 4rem; color: #fff; margin: 0 auto 20px;
             border: 4px solid #6366f1;
-            box-shadow: 0 0 40px rgba(99,102,241,0.2);
-            animation: fadeUp 0.8s ease forwards;
         }
 
         section { padding: 100px 20px; max-width: 1000px; margin: 0 auto; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
         .section-title { font-size: 2rem; font-weight: 700; color: #fff; text-align: center; margin-bottom: 10px; }
-        .underline { width: 50px; height: 3px; background: #6366f1; margin: 0 auto 40px; border-radius: 2px; animation: pulse 2s ease-in-out infinite; }
-        @keyframes pulse { 0%,100% { opacity: 1; transform: scaleX(1); } 50% { opacity: 0.6; transform: scaleX(1.3); } }
+        .underline { width: 50px; height: 3px; background: #6366f1; margin: 0 auto 40px; border-radius: 2px; }
 
         .home { text-align: center; padding-top: 120px; }
-        .home h1 { font-size: 3.5rem; font-weight: 800; color: #fff; margin-bottom: 12px; animation: fadeUp 0.8s ease forwards; }
+        .home h1 { font-size: 3.5rem; font-weight: 800; color: #fff; margin-bottom: 12px; }
         .home h1 span { color: #6366f1; }
-        .home h2 { font-size: 1.2rem; font-weight: 400; color: #888; margin-bottom: 16px; animation: fadeUp 0.8s ease 0.2s forwards; opacity: 0; }
-        .home p { font-size: 1.1rem; color: #666; max-width: 500px; margin: 0 auto 30px; animation: fadeUp 0.8s ease 0.4s forwards; opacity: 0; }
-        .home-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; animation: fadeUp 0.8s ease 0.6s forwards; opacity: 0; }
-        @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .home h2 { font-size: 1.2rem; font-weight: 400; color: #888; margin-bottom: 16px; }
+        .home p { font-size: 1.1rem; color: #666; max-width: 500px; margin: 0 auto 30px; }
+        .home-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
         .btn { padding: 12px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: all 0.3s; }
         .btn-primary { background: #6366f1; color: #fff; }
@@ -76,16 +71,15 @@
         .skill-card p { font-size: 0.85rem; color: #777; }
 
         .projects { background: #0d0d0d; }
-        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
         .project-card { background: #0a0a0a; padding: 24px; border-radius: 12px; border: 1px solid #1a1a1a; transition: all 0.3s; }
         .project-card:hover { border-color: #6366f1; transform: translateY(-5px); }
         .project-card h3 { font-size: 1.1rem; color: #fff; margin-bottom: 6px; text-transform: capitalize; }
-        .project-card p { font-size: 0.9rem; color: #888; margin-bottom: 12px; min-height: 40px; }
+        .project-card p { font-size: 0.9rem; color: #888; margin-bottom: 12px; }
         .project-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
         .project-tags span { background: #1a1a1a; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; color: #aaa; border: 1px solid #222; }
-        .project-link { color: #6366f1; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: color 0.3s; display: inline-block; }
+        .project-link { color: #6366f1; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: color 0.3s; }
         .project-link:hover { color: #818cf8; }
-        .loading { text-align: center; color: #666; grid-column: 1 / -1; padding: 40px 0; }
 
         .contact { background: #0a0a0a; }
         .contact-content { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; text-align: center; max-width: 700px; margin: 0 auto; }
@@ -108,8 +102,7 @@
             .skills-grid { grid-template-columns: 1fr 1fr; }
             .projects-grid { grid-template-columns: 1fr; }
             section { padding: 80px 16px; }
-            .profile-photo { width: 140px; height: 140px; }
-            .profile-photo-placeholder { width: 140px; height: 140px; font-size: 3rem; }
+            .profile-photo { width: 120px; height: 120px; }
         }
         @media (max-width: 480px) {
             nav { padding: 10px 14px; }
@@ -118,13 +111,11 @@
             .home h1 { font-size: 1.8rem; }
             .skills-grid { grid-template-columns: 1fr; }
             .btn { padding: 8px 18px; font-size: 0.8rem; }
-            .profile-photo { width: 120px; height: 120px; }
-            .profile-photo-placeholder { width: 120px; height: 120px; font-size: 2.5rem; }
+            .profile-photo { width: 100px; height: 100px; }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="nav-container">
             <div class="logo">MO<span>.</span></div>
@@ -138,7 +129,6 @@
         </div>
     </nav>
 
-    <!-- Home -->
     <section id="home" class="home">
         <div>
             <img src="images/profile.jpg" alt="Michael Ombuya" class="profile-photo" 
@@ -154,7 +144,6 @@
         </div>
     </section>
 
-    <!-- About -->
     <section id="about" class="about">
         <h2 class="section-title">About Me</h2>
         <div class="underline"></div>
@@ -169,7 +158,6 @@
         </div>
     </section>
 
-    <!-- Skills -->
     <section id="skills" class="skills">
         <h2 class="section-title">Skills</h2>
         <div class="underline"></div>
@@ -181,16 +169,14 @@
         </div>
     </section>
 
-    <!-- Projects -->
     <section id="projects" class="projects">
         <h2 class="section-title">Projects</h2>
         <div class="underline"></div>
         <div id="projects-grid" class="projects-grid">
-            <!-- Projects will be loaded here -->
+            <!-- Projects will load here -->
         </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact" class="contact">
         <h2 class="section-title">Get in Touch</h2>
         <div class="underline"></div>
@@ -221,112 +207,76 @@
             });
         });
 
-        // ===== PROJECTS (Static + GitHub Fallback) =====
-        async function loadProjects() {
+        // ===== PROJECTS (Your actual GitHub projects) =====
+        const projects = [
+            { 
+                name: 'HRMS System', 
+                desc: 'Complete HR management with admin and employee dashboards', 
+                lang: 'Node.js', 
+                stars: 0, 
+                forks: 0, 
+                url: 'https://github.com/ombuyamichael1-ship-it/hrms', 
+                icon: '🏢' 
+            },
+            { 
+                name: 'Job Board (Python)', 
+                desc: 'Professional job platform with admin and user panels', 
+                lang: 'Python', 
+                stars: 0, 
+                forks: 0, 
+                url: 'https://github.com/ombuyamichael1-ship-it/jobboard-python', 
+                icon: '💼' 
+            },
+            { 
+                name: 'Portfolio', 
+                desc: 'Personal portfolio website with GitHub integration', 
+                lang: 'HTML', 
+                stars: 1, 
+                forks: 0, 
+                url: 'https://github.com/ombuyamichael1-ship-it/portfolio', 
+                icon: '🚀' 
+            },
+            { 
+                name: 'OmniBrain AI', 
+                desc: 'AI workspace with voice, calendar, and automation', 
+                lang: 'Python', 
+                stars: 0, 
+                forks: 0, 
+                url: 'https://github.com/ombuyamichael1-ship-it/omnibrain', 
+                icon: '🧠' 
+            },
+            { 
+                name: 'Job Board (React)', 
+                desc: 'React-based job platform with full features', 
+                lang: 'React', 
+                stars: 0, 
+                forks: 0, 
+                url: 'https://github.com/ombuyamichael1-ship-it/job-board', 
+                icon: '⚛️' 
+            }
+        ];
+
+        function displayProjects() {
             const container = document.getElementById('projects-grid');
-
-            // Static projects (always show)
-            const staticProjects = [
-                { name: 'HRMS System', description: 'Complete HR management with admin and employee dashboards', language: 'Node.js', stars: 0, forks: 0, url: 'https://github.com/ombuyamichael1-ship-it/hrms', icon: '🏢' },
-                { name: 'Job Board', description: 'Professional job platform with admin and user panels', language: 'Python', stars: 0, forks: 0, url: 'https://github.com/ombuyamichael1-ship-it/jobboard-python', icon: '💼' },
-                { name: 'Portfolio', description: 'Personal portfolio website with GitHub integration', language: 'HTML', stars: 1, forks: 0, url: 'https://github.com/ombuyamichael1-ship-it/portfolio', icon: '🚀' },
-                { name: 'OmniBrain AI', description: 'AI workspace with voice, calendar, and automation', language: 'Python', stars: 0, forks: 0, url: 'https://github.com/ombuyamichael1-ship-it/omnibrain', icon: '🧠' },
-                { name: 'Cyber Toolkit', description: 'Ethical hacking tools and vulnerability scanner', language: 'Python', stars: 0, forks: 0, url: '#', icon: '🔐' },
-                { name: 'IT Support System', description: 'Complete IT ticketing and support management system', language: 'Node.js', stars: 0, forks: 0, url: '#', icon: '💻' }
-            ];
-
-            try {
-                // Try to fetch from GitHub
-                const response = await fetch('https://api.github.com/users/ombuyamichael1-ship-it/repos?sort=updated&per_page=10');
-                
-                if (response.ok) {
-                    const repos = await response.json();
-                    console.log('✅ GitHub projects loaded:', repos.length);
-                    
-                    if (repos.length > 0) {
-                        // Merge GitHub repos with static projects
-                        const githubProjects = repos.map(repo => ({
-                            name: repo.name.replace(/-/g, ' ').replace(/_/g, ' '),
-                            description: repo.description || 'No description available',
-                            language: repo.language || 'N/A',
-                            stars: repo.stargazers_count || 0,
-                            forks: repo.forks_count || 0,
-                            url: repo.html_url,
-                            icon: getIcon(repo.name)
-                        }));
-                        
-                        // Combine: GitHub projects first, then static ones that aren't already listed
-                        const allProjects = [...githubProjects];
-                        staticProjects.forEach(sp => {
-                            if (!allProjects.some(p => p.name.toLowerCase() === sp.name.toLowerCase())) {
-                                allProjects.push(sp);
-                            }
-                        });
-                        
-                        renderProjects(allProjects, container);
-                        return;
-                    }
-                }
-                
-                // Fallback: use static projects only
-                console.log('⚠️ Using static projects');
-                renderProjects(staticProjects, container);
-
-            } catch (error) {
-                console.error('❌ Error fetching GitHub repos:', error);
-                // Use static projects as fallback
-                renderProjects(staticProjects, container);
-            }
-        }
-
-        function getIcon(name) {
-            const icons = {
-                'hrms': '🏢',
-                'jobboard': '💼',
-                'portfolio': '🚀',
-                'omnibrain': '🧠',
-                'ecommerce': '🛒',
-                'blog': '✍️',
-                'api': '🔌',
-                'dashboard': '📊',
-                'chat': '💬',
-                'game': '🎮',
-                'todo': '📋',
-                'weather': '🌤️',
-                'support': '💻',
-                'toolkit': '🔐'
-            };
-            for (const [key, value] of Object.entries(icons)) {
-                if (name.toLowerCase().includes(key)) return value;
-            }
-            return '📁';
-        }
-
-        function renderProjects(projects, container) {
-            if (!projects || projects.length === 0) {
-                container.innerHTML = `<div class="loading">No projects found</div>`;
-                return;
-            }
-
-            container.innerHTML = projects.map(project => `
+            container.innerHTML = projects.map(p => `
                 <div class="project-card">
                     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                        <span style="font-size:1.8rem;">${project.icon || '📁'}</span>
+                        <span style="font-size:2rem;">${p.icon}</span>
                     </div>
-                    <h3>${project.name}</h3>
-                    <p>${project.description || 'No description available'}</p>
+                    <h3>${p.name}</h3>
+                    <p>${p.desc}</p>
                     <div class="project-tags">
-                        <span>${project.language || 'N/A'}</span>
-                        <span>⭐ ${project.stars || 0}</span>
-                        <span>🍴 ${project.forks || 0}</span>
+                        <span>${p.lang}</span>
+                        <span>⭐ ${p.stars}</span>
+                        <span>🍴 ${p.forks}</span>
                     </div>
-                    <a href="${project.url}" target="_blank" class="project-link">View on GitHub →</a>
+                    <a href="${p.url}" target="_blank" class="project-link">View on GitHub →</a>
                 </div>
             `).join('');
         }
 
         // Load projects
-        loadProjects();
+        displayProjects();
     </script>
 </body>
 </html>
