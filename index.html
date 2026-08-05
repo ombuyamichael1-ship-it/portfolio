@@ -1,155 +1,121 @@
-    <!-- Contact -->
-    <section id="contact" class="py-20 bg-[#0f172a] border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-white mb-4">Get In <span class="gradient-text">Touch</span></h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                <a href="mailto:ombuyamichael1@gmail.com" class="glass rounded-2xl p-6 border border-white/10 text-center card-hover">
-                    <div class="text-4xl mb-4">📧</div>
-                    <h4 class="text-white font-semibold">Email</h4>
-                    <p class="text-gray-400 text-sm">ombuyamichael1@gmail.com</p>
-                </a>
-                <a href="https://github.com/ombuyamichael1-ship-it" target="_blank" class="glass rounded-2xl p-6 border border-white/10 text-center card-hover">
-                    <div class="text-4xl mb-4">🐙</div>
-                    <h4 class="text-white font-semibold">GitHub</h4>
-                    <p class="text-gray-400 text-sm">View my code</p>
-                </a>
-                <a href="tel:0118726921" class="glass rounded-2xl p-6 border border-white/10 text-center card-hover">
-                    <div class="text-4xl mb-4">📱</div>
-                    <h4 class="text-white font-semibold">Phone</h4>
-                    <p class="text-gray-400 text-sm">0118726921</p>
-                </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Onyango Ombuya - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">MO</div>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="home">
+        <div class="home-content">
+            <h1 class="fade-in">Hi, I'm <span>Michael Onyango Ombuya</span></h1>
+            <h2 class="fade-in delay-1">Software Engineering Student | IT Support | Cybersecurity Enthusiast</h2>
+            <p class="fade-in delay-2">Passionate about building secure systems and solving technical challenges.</p>
+            <div class="home-buttons fade-in delay-3">
+                <a href="#contact" class="btn primary">Get in Touch</a>
+                <a href="#projects" class="btn secondary">View My Work</a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-[#0f172a] border-t border-white/5 py-8 text-center">
-        <div class="max-w-7xl mx-auto px-4">
-            <p class="text-gray-500 text-sm">&copy; 2026 Michael Ombuya. Built with ❤️ on Acode</p>
-            <p class="text-gray-600 text-xs mt-2">Projects fetched from GitHub API</p>
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="underline"></div>
+            <div class="about-content">
+                <p>I'm a Software Engineering student at MOHI Technical Training Institute, passionate about cybersecurity, IT support, and building secure systems.</p>
+                <div class="about-grid">
+                    <div><strong>Phone</strong><p>0118726921</p></div>
+                    <div><strong>Email</strong><p>ombuyamichael1@gmail.com</p></div>
+                    <div><strong>Nationality</strong><p>Kenyan</p></div>
+                    <div><strong>Languages</strong><p>English, Kiswahili, Luo</p></div>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="underline"></div>
+            <div class="skills-grid">
+                <div class="skill-card"><h3>Networking</h3><p>Fundamentals, Cisco, Configuration, Troubleshooting</p></div>
+                <div class="skill-card"><h3>IT Support</h3><p>Hardware, Software, System Setup, User Support</p></div>
+                <div class="skill-card"><h3>Cybersecurity</h3><p>Ethical Hacking, Kali Linux, Vulnerability Scanning</p></div>
+                <div class="skill-card"><h3>Development</h3><p>Python, Node.js, JavaScript, HTML/CSS</p></div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="underline"></div>
+            <div id="github-projects" class="projects-grid">
+                <div class="loading-spinner">Loading projects...</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="underline"></div>
+            <div class="contact-content">
+                <div><strong>Phone</strong><p>0118726921</p></div>
+                <div><strong>Email</strong><p><a href="mailto:ombuyamichael1@gmail.com">ombuyamichael1@gmail.com</a></p></div>
+                <div><strong>GitHub</strong><p><a href="https://github.com/ombuyamichael1-ship-it">github.com/ombuyamichael1-ship-it</a></p></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Michael Onyango Ombuya. Built with ❤️</p>
     </footer>
 
+    <script src="script.js"></script>
     <script>
-        // Mobile menu toggle
-        function toggleMenu() {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
-        }
-
-        // Fetch GitHub repositories
-        async function fetchGitHubRepos() {
+        async function loadGitHubProjects() {
+            const container = document.getElementById('github-projects');
             try {
-                const response = await fetch('https://api.github.com/users/ombuyamichael1-ship-it/repos?sort=updated&per_page=20');
+                const response = await fetch('https://api.github.com/users/ombuyamichael1-ship-it/repos?sort=updated&per_page=6');
                 const repos = await response.json();
-                
-                // Update stats
-                document.getElementById('repoCount').textContent = repos.length;
-                
-                // Calculate total stars
-                const totalStars = repos.reduce((acc, repo) => acc + repo.stargazers_count, 0);
-                document.getElementById('starCount').textContent = totalStars;
-
-                // Render projects
-                const grid = document.getElementById('projectsGrid');
-                grid.innerHTML = '';
-
                 if (repos.length === 0) {
-                    grid.innerHTML = '<div class="col-span-3 text-center text-gray-400 py-10">No repositories found</div>';
+                    container.innerHTML = '<p style="text-align:center;color:#888;">No projects found</p>';
                     return;
                 }
-
-                const languageColors = {
-                    'Python': '#3572A5',
-                    'JavaScript': '#f1e05a',
-                    'HTML': '#e34c26',
-                    'CSS': '#563d7c',
-                    'Java': '#b07219',
-                    'TypeScript': '#2b7489',
-                    'C++': '#f34b7d',
-                    'PHP': '#4F5D95',
-                    'Ruby': '#701516',
-                    'Go': '#00ADD8',
-                    'Swift': '#ffac45',
-                    'Kotlin': '#F18E33',
-                    'Vue': '#41b883',
-                    'React': '#61dafb',
-                    'Dart': '#00B4AB',
-                    'Rust': '#dea584',
-                    'Shell': '#89e051',
-                    'SQL': '#e38c00',
-                    'SCSS': '#c6538c',
-                    'Lua': '#000080'
-                };
-
-                const projectIcons = {
-                    'hrms': '🏢',
-                    'jobboard': '💼',
-                    'portfolio': '🚀',
-                    'omnibrain': '🧠',
-                    'ecommerce': '🛒',
-                    'blog': '✍️',
-                    'api': '🔌',
-                    'dashboard': '📊',
-                    'chat': '💬',
-                    'game': '🎮',
-                    'todo': '📋',
-                    'weather': '🌤️'
-                };
-
-                repos.forEach((repo, index) => {
-                    const langColor = languageColors[repo.language] || '#6c5ce7';
-                    
-                    // Get icon based on repo name
-                    let icon = '📁';
-                    for (const [key, value] of Object.entries(projectIcons)) {
-                        if (repo.name.toLowerCase().includes(key)) {
-                            icon = value;
-                            break;
-                        }
-                    }
-
-                    const card = document.createElement('div');
-                    card.className = 'project-card glass rounded-2xl p-6 border border-white/10 card-hover';
-                    card.style.animationDelay = `${index * 0.1}s`;
-                    
-                    card.innerHTML = `
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-3xl">${icon}</span>
-                            <span class="px-2 py-0.5 ${repo.language ? 'bg-indigo-500/20 text-indigo-400' : 'bg-gray-500/20 text-gray-400'} rounded-full text-xs">${repo.language || 'N/A'}</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-white mb-2 truncate">${repo.name.replace(/-/g, ' ').replace(/_/g, ' ')}</h3>
-                        <p class="text-gray-400 text-sm mb-4 line-clamp-2">${repo.description || 'No description available'}</p>
-                        <div class="repo-stats mb-4">
-                            <span><span class="language-dot" style="background-color: ${langColor}"></span>${repo.language || 'N/A'}</span>
+                container.innerHTML = repos.map(repo => `
+                    <div class="project-card">
+                        <h3>${repo.name.replace(/-/g, ' ').replace(/_/g, ' ')}</h3>
+                        <p>${repo.description || 'No description available'}</p>
+                        <div class="project-tags">
+                            <span>${repo.language || 'N/A'}</span>
                             <span>⭐ ${repo.stargazers_count}</span>
                             <span>🍴 ${repo.forks_count}</span>
                         </div>
-                        <div class="flex gap-2 flex-wrap">
-                            <a href="${repo.html_url}" target="_blank" class="flex-1 px-3 py-1.5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg text-xs text-center hover:shadow-lg transition">View on GitHub</a>
-                            ${repo.homepage ? `<a href="${repo.homepage}" target="_blank" class="px-3 py-1.5 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg text-xs text-center hover:shadow-lg transition">Live Demo</a>` : ''}
-                        </div>
-                        <div class="mt-2 text-xs text-gray-500">Updated ${new Date(repo.updated_at).toLocaleDateString()}</div>
-                    `;
-                    
-                    grid.appendChild(card);
-                });
-
-            } catch (error) {
-                console.error('Error fetching GitHub repos:', error);
-                document.getElementById('projectsGrid').innerHTML = `
-                    <div class="col-span-3 text-center text-red-400 py-10">
-                        ❌ Error loading projects. Please try again later.
-                        <br><span class="text-gray-500 text-sm">${error.message}</span>
+                        <a href="${repo.html_url}" target="_blank" class="project-link">View on GitHub →</a>
                     </div>
-                `;
+                `).join('');
+            } catch (error) {
+                container.innerHTML = '<p style="text-align:center;color:#888;">Error loading projects</p>';
+                console.error('Error fetching GitHub repos:', error);
             }
         }
-
-        // Fetch projects on page load
-        fetchGitHubRepos();
+        loadGitHubProjects();
     </script>
 </body>
 </html>
