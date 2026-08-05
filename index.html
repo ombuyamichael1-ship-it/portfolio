@@ -6,110 +6,87 @@
     <title>Michael Ombuya - Portfolio</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', -apple-system, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.6; scroll-behavior: smooth; display: flex; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.6; scroll-behavior: smooth; }
 
-        /* ===== SIDEBAR ===== */
-        .sidebar {
+        /* ===== TOP NAVIGATION ===== */
+        nav {
             position: fixed;
-            left: 0;
             top: 0;
-            width: 72px;
-            height: 100vh;
-            background: #111;
-            border-right: 1px solid #1a1a1a;
+            width: 100%;
+            background: rgba(10,10,10,0.95);
+            backdrop-filter: blur(10px);
+            padding: 16px 40px;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .logo span { color: #6366f1; }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: #999;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #fff;
+        }
+
+        /* ===== PROFILE PHOTO ===== */
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #6366f1;
+            margin-bottom: 20px;
+            box-shadow: 0 0 40px rgba(99,102,241,0.2);
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        .profile-photo-placeholder {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 1000;
-            gap: 30px;
-            animation: slideIn 0.8s ease forwards;
-        }
-
-        @keyframes slideIn {
-            from { transform: translateX(-100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-
-        .sidebar .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: #6366f1;
-            writing-mode: vertical-rl;
-            letter-spacing: 4px;
-            margin-bottom: 20px;
-            animation: glow 3s ease-in-out infinite;
-        }
-
-        @keyframes glow {
-            0%, 100% { text-shadow: 0 0 10px rgba(99,102,241,0.3); }
-            50% { text-shadow: 0 0 30px rgba(99,102,241,0.6); }
-        }
-
-        .sidebar a {
-            color: #555;
-            text-decoration: none;
-            font-size: 1.3rem;
-            transition: all 0.3s;
-            position: relative;
-            padding: 8px;
-        }
-
-        .sidebar a:hover {
-            color: #6366f1;
-            transform: scale(1.2) translateX(-4px);
-        }
-
-        .sidebar a.active {
-            color: #6366f1;
-        }
-
-        .sidebar a.active::before {
-            content: '';
-            position: absolute;
-            left: -12px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 3px;
-            height: 20px;
-            background: #6366f1;
-            border-radius: 2px;
-            animation: slideLine 0.5s ease forwards;
-        }
-
-        @keyframes slideLine {
-            from { height: 0; }
-            to { height: 20px; }
-        }
-
-        .sidebar a .tooltip {
-            display: none;
-            position: absolute;
-            left: 60px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: #1a1a1a;
+            font-size: 4rem;
             color: #fff;
-            padding: 4px 12px;
-            border-radius: 6px;
-            font-size: 0.75rem;
-            white-space: nowrap;
-            border: 1px solid #2a2a2a;
+            margin: 0 auto 20px;
+            border: 4px solid #6366f1;
+            box-shadow: 0 0 40px rgba(99,102,241,0.2);
+            animation: fadeUp 0.8s ease forwards;
         }
 
-        .sidebar a:hover .tooltip {
-            display: block;
-        }
-
-        /* ===== MAIN CONTENT ===== */
-        .main-content {
-            margin-left: 72px;
-            flex: 1;
-        }
-
+        /* ===== SECTIONS ===== */
         section {
-            padding: 80px 40px;
-            max-width: 900px;
+            padding: 100px 20px;
+            max-width: 1000px;
             margin: 0 auto;
             min-height: 100vh;
             display: flex;
@@ -121,6 +98,7 @@
             font-size: 2rem;
             font-weight: 700;
             color: #fff;
+            text-align: center;
             margin-bottom: 10px;
         }
 
@@ -128,7 +106,7 @@
             width: 50px;
             height: 3px;
             background: #6366f1;
-            margin-bottom: 30px;
+            margin: 0 auto 40px;
             border-radius: 2px;
             animation: pulse 2s ease-in-out infinite;
         }
@@ -139,6 +117,11 @@
         }
 
         /* ===== HOME ===== */
+        .home {
+            text-align: center;
+            padding-top: 120px;
+        }
+
         .home h1 {
             font-size: 3.5rem;
             font-weight: 800;
@@ -149,8 +132,8 @@
 
         .home h1 span { color: #6366f1; }
         .home h2 { font-size: 1.2rem; font-weight: 400; color: #888; margin-bottom: 16px; animation: fadeUp 0.8s ease 0.2s forwards; opacity: 0; }
-        .home p { font-size: 1.1rem; color: #666; max-width: 500px; margin-bottom: 30px; animation: fadeUp 0.8s ease 0.4s forwards; opacity: 0; }
-        .home-buttons { display: flex; gap: 14px; flex-wrap: wrap; animation: fadeUp 0.8s ease 0.6s forwards; opacity: 0; }
+        .home p { font-size: 1.1rem; color: #666; max-width: 500px; margin: 0 auto 30px; animation: fadeUp 0.8s ease 0.4s forwards; opacity: 0; }
+        .home-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; animation: fadeUp 0.8s ease 0.6s forwards; opacity: 0; }
 
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(30px); }
@@ -189,7 +172,7 @@
 
         /* ===== ABOUT ===== */
         .about { background: #0d0d0d; }
-        .about-content { max-width: 700px; }
+        .about-content { max-width: 700px; margin: 0 auto; text-align: center; }
         .about-content p { color: #aaa; font-size: 1.05rem; margin-bottom: 30px; }
         .about-grid {
             display: grid;
@@ -260,6 +243,7 @@
             gap: 20px;
             text-align: center;
             max-width: 700px;
+            margin: 0 auto;
         }
         .contact-content div {
             background: #111;
@@ -289,129 +273,120 @@
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
-            .sidebar { width: 56px; gap: 20px; }
-            .sidebar .logo { font-size: 1rem; letter-spacing: 2px; }
-            .sidebar a { font-size: 1.1rem; }
-            .sidebar a .tooltip { display: none !important; }
-            .main-content { margin-left: 56px; }
-            section { padding: 60px 20px; }
+            nav { padding: 12px 20px; }
+            nav ul { gap: 16px; }
+            nav ul li a { font-size: 0.8rem; }
             .home h1 { font-size: 2.2rem; }
             .about-grid { grid-template-columns: 1fr; }
             .contact-content { grid-template-columns: 1fr; }
             .skills-grid { grid-template-columns: 1fr 1fr; }
             .projects-grid { grid-template-columns: 1fr; }
+            section { padding: 80px 16px; }
+            .profile-photo { width: 140px; height: 140px; }
+            .profile-photo-placeholder { width: 140px; height: 140px; font-size: 3rem; }
         }
 
         @media (max-width: 480px) {
-            .sidebar { width: 48px; gap: 16px; }
-            .sidebar .logo { font-size: 0.8rem; letter-spacing: 1px; }
-            .sidebar a { font-size: 0.9rem; }
-            .main-content { margin-left: 48px; }
-            section { padding: 40px 14px; }
+            nav { padding: 10px 14px; }
+            nav ul { gap: 10px; }
+            nav ul li a { font-size: 0.7rem; }
             .home h1 { font-size: 1.8rem; }
             .skills-grid { grid-template-columns: 1fr; }
             .btn { padding: 8px 18px; font-size: 0.8rem; }
+            .profile-photo { width: 120px; height: 120px; }
+            .profile-photo-placeholder { width: 120px; height: 120px; font-size: 2.5rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Sidebar Navigation -->
-    <nav class="sidebar">
-        <div class="logo">MO</div>
-        <a href="#home" class="active" title="Home">
-            🏠
-            <span class="tooltip">Home</span>
-        </a>
-        <a href="#about" title="About">
-            👤
-            <span class="tooltip">About</span>
-        </a>
-        <a href="#skills" title="Skills">
-            ⚡
-            <span class="tooltip">Skills</span>
-        </a>
-        <a href="#projects" title="Projects">
-            📁
-            <span class="tooltip">Projects</span>
-        </a>
-        <a href="#contact" title="Contact">
-            ✉️
-            <span class="tooltip">Contact</span>
-        </a>
+    <!-- Top Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">MO<span>.</span></div>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- Main Content -->
-    <div class="main-content">
-        <!-- Home -->
-        <section id="home" class="home">
-            <div>
-                <h1>Hi, I'm <span>Michael Ombuya</span></h1>
-                <h2>Software Engineering Student | IT Support | Cybersecurity Enthusiast</h2>
-                <p>Passionate about building secure systems and solving technical challenges.</p>
-                <div class="home-buttons">
-                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                    <a href="#projects" class="btn btn-secondary">View My Work</a>
-                </div>
+    <!-- Home -->
+    <section id="home" class="home">
+        <div>
+            <!-- Profile Photo - Replace images/profile.jpg with your photo -->
+            <img src="images/profile.jpg" alt="Michael Ombuya" class="profile-photo" 
+                 onerror="this.style.display='none'; document.getElementById('placeholder').style.display='flex';">
+            <div id="placeholder" class="profile-photo-placeholder" style="display:none;">👤</div>
+            
+            <h1>Hi, I'm <span>Michael Ombuya</span></h1>
+            <h2>Software Engineering Student | IT Support | Cybersecurity Enthusiast</h2>
+            <p>Passionate about building secure systems and solving technical challenges.</p>
+            <div class="home-buttons">
+                <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                <a href="#projects" class="btn btn-secondary">View My Work</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- About -->
-        <section id="about" class="about">
-            <h2 class="section-title">About Me</h2>
-            <div class="underline"></div>
-            <div class="about-content">
-                <p>I'm a Software Engineering student at MOHI Technical Training Institute, passionate about cybersecurity, IT support, and building secure systems.</p>
-                <div class="about-grid">
-                    <div><strong>Phone</strong><p>0118726921</p></div>
-                    <div><strong>Email</strong><p>ombuyamichael1@gmail.com</p></div>
-                    <div><strong>Nationality</strong><p>Kenyan</p></div>
-                    <div><strong>Languages</strong><p>English, Kiswahili, Luo</p></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills -->
-        <section id="skills" class="skills">
-            <h2 class="section-title">Skills</h2>
-            <div class="underline"></div>
-            <div class="skills-grid">
-                <div class="skill-card"><h3>Networking</h3><p>Fundamentals, Cisco, Configuration</p></div>
-                <div class="skill-card"><h3>IT Support</h3><p>Hardware, Software, System Setup</p></div>
-                <div class="skill-card"><h3>Cybersecurity</h3><p>Ethical Hacking, Kali Linux</p></div>
-                <div class="skill-card"><h3>Development</h3><p>Python, Node.js, JavaScript</p></div>
-            </div>
-        </section>
-
-        <!-- Projects -->
-        <section id="projects" class="projects">
-            <h2 class="section-title">Projects</h2>
-            <div class="underline"></div>
-            <div id="projects-grid" class="projects-grid">
-                <div class="loading">⏳ Loading projects...</div>
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact" class="contact">
-            <h2 class="section-title">Get in Touch</h2>
-            <div class="underline"></div>
-            <div class="contact-content">
+    <!-- About -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="underline"></div>
+        <div class="about-content">
+            <p>I'm a Software Engineering student at MOHI Technical Training Institute, passionate about cybersecurity, IT support, and building secure systems.</p>
+            <div class="about-grid">
                 <div><strong>Phone</strong><p>0118726921</p></div>
-                <div><strong>Email</strong><p><a href="mailto:ombuyamichael1@gmail.com">ombuyamichael1@gmail.com</a></p></div>
-                <div><strong>GitHub</strong><p><a href="https://github.com/ombuyamichael1-ship-it">github.com/ombuyamichael1-ship-it</a></p></div>
+                <div><strong>Email</strong><p>ombuyamichael1@gmail.com</p></div>
+                <div><strong>Nationality</strong><p>Kenyan</p></div>
+                <div><strong>Languages</strong><p>English, Kiswahili, Luo</p></div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2026 Michael Ombuya. Built with ❤️</p>
-        </footer>
-    </div>
+    <!-- Skills -->
+    <section id="skills" class="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="underline"></div>
+        <div class="skills-grid">
+            <div class="skill-card"><h3>Networking</h3><p>Fundamentals, Cisco, Configuration</p></div>
+            <div class="skill-card"><h3>IT Support</h3><p>Hardware, Software, System Setup</p></div>
+            <div class="skill-card"><h3>Cybersecurity</h3><p>Ethical Hacking, Kali Linux</p></div>
+            <div class="skill-card"><h3>Development</h3><p>Python, Node.js, JavaScript</p></div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="underline"></div>
+        <div id="projects-grid" class="projects-grid">
+            <div class="loading">⏳ Loading projects...</div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="underline"></div>
+        <div class="contact-content">
+            <div><strong>Phone</strong><p>0118726921</p></div>
+            <div><strong>Email</strong><p><a href="mailto:ombuyamichael1@gmail.com">ombuyamichael1@gmail.com</a></p></div>
+            <div><strong>GitHub</strong><p><a href="https://github.com/ombuyamichael1-ship-it">github.com/ombuyamichael1-ship-it</a></p></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Michael Ombuya. Built with ❤️</p>
+    </footer>
 
     <script>
         // ===== ACTIVE NAV LINK ON SCROLL =====
         const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.sidebar a');
+        const navLinks = document.querySelectorAll('nav ul li a');
 
         window.addEventListener('scroll', () => {
             let current = '';
@@ -429,17 +404,6 @@
             });
         });
 
-        // ===== SMOOTH SCROLL FOR SIDEBAR LINKS =====
-        navLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-
         // ===== FETCH GITHUB PROJECTS =====
         async function loadProjects() {
             const container = document.getElementById('projects-grid');
@@ -451,7 +415,6 @@
                 }
                 
                 const repos = await res.json();
-                console.log('Repos loaded:', repos.length);
                 
                 if (!repos.length) {
                     container.innerHTML = `<div class="loading">No projects found</div>`;
